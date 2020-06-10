@@ -1,92 +1,102 @@
 ================================================================================
-MICROSOFT �������: MapEditor ��Ŀ����
+MICROSOFT 基础类库: MapEditor 项目概述
 ===============================================================================
+大学刚毕业那会自娱自乐开发的地图编辑器，后来由于忙于找工作而搁置
 
-Ӧ�ó�������Ϊ����������� MapEditor Ӧ�ó��򡣴�Ӧ�ó��򲻽���ʾ Microsoft ������Ļ���ʹ�÷�����������Ϊ����дӦ�ó������㡣
+1.使用菜单栏新建命令或工具栏新建按钮可以新建一个地图。
+2.使用鼠标选中场景资源后，在地图上点击即可将对象添加到地图。
+3.场景分为4层，在某一层添加对象时需求先切换图层。
+3.程序支持导入自己的资源，可以通过修改setting.ini配置文件的相对路径更改资源文件夹
+4.程序目前还不完善，有很多地方设计的不是很合理，以后会慢慢改进
 
-���ļ���Ҫ������� MapEditor Ӧ�ó����ÿ���ļ������ݡ�
+程序作者：朱启坤
+
+
+应用程序向导已为您创建了这个 MapEditor 应用程序。此应用程序不仅演示 Microsoft 基础类的基本使用方法，还可作为您编写应用程序的起点。
+
+本文件概要介绍组成 MapEditor 应用程序的每个文件的内容。
 
 MapEditor.vcxproj
-����ʹ��Ӧ�ó��������ɵ� VC++ ��Ŀ������Ŀ�ļ��� 
-���������ɸ��ļ��� Visual C++ �İ汾��Ϣ���Լ��й�ʹ��Ӧ�ó�����ѡ���ƽ̨�����ú���Ŀ���ܵ���Ϣ��
+这是使用应用程序向导生成的 VC++ 项目的主项目文件。 
+它包含生成该文件的 Visual C++ 的版本信息，以及有关使用应用程序向导选择的平台、配置和项目功能的信息。
 
 MapEditor.vcxproj.filters
-    ����ʹ�á�Ӧ�ó����򵼡����ɵ� VC++ ��Ŀɸѡ���ļ���
-    �������й���Ŀ�ļ���ɸѡ��֮��Ĺ�����Ϣ���� IDE �У�ͨ�����ֹ��������ض��ڵ����Է�����ʽ��ʾ����������չ�����ļ������磬��.cpp���ļ��롰Դ�ļ���ɸѡ��������
+    这是使用“应用程序向导”生成的 VC++ 项目筛选器文件。
+    它包含有关项目文件与筛选器之间的关联信息。在 IDE 中，通过这种关联，在特定节点下以分组形式显示具有相似扩展名的文件。例如，“.cpp”文件与“源文件”筛选器关联。
 
 MapEditor.h
-����Ӧ�ó������Ҫͷ�ļ���������������Ŀ�ض���ͷ�ļ�(���� Resource.h)�������� CMapEditorApp Ӧ�ó����ࡣ
+这是应用程序的主要头文件。它包括其他项目特定的头文件(包括 Resource.h)，并声明 CMapEditorApp 应用程序类。
 
 MapEditor.cpp
-���ǰ���Ӧ�ó����� CMapEditorApp ����ҪӦ�ó���Դ�ļ���
+这是包含应用程序类 CMapEditorApp 的主要应用程序源文件。
 
 MapEditor.rc
-���ǳ���ʹ�õ����� Microsoft Windows ��Դ���б��������� RES ��Ŀ¼�д洢��ͼ�ꡢλͼ�͹�ꡣ���ļ�����ֱ���� Microsoft Visual C++ �н��б༭����Ŀ��Դλ�� 2052 �С�
+这是程序使用的所有 Microsoft Windows 资源的列表。它包括 RES 子目录中存储的图标、位图和光标。此文件可以直接在 Microsoft Visual C++ 中进行编辑。项目资源位于 2052 中。
 
 res\MapEditor.ico
-��������Ӧ�ó���ͼ���ͼ���ļ�����ͼ���������Ҫ��Դ�ļ� MapEditor.rc �С�
+这是用作应用程序图标的图标文件。此图标包括在主要资源文件 MapEditor.rc 中。
 
 res\MapEditor.rc2
-���ļ��������� Microsoft Visual C++ �н��б༭����Դ����Ӧ�ý���������Դ�༭���༭��������Դ���ڴ��ļ��С�
+此文件包含不在 Microsoft Visual C++ 中进行编辑的资源。您应该将不可由资源编辑器编辑的所有资源放在此文件中。
 
 /////////////////////////////////////////////////////////////////////////////
 
-��������ܴ���:
-��Ŀ������׼ MFC ���档
+对于主框架窗口:
+项目包含标准 MFC 界面。
 
 MainFrm.h, MainFrm.cpp
-��Щ�ļ���������� CMainFrame������������
-CFrameWnd ���������� SDI ��ܹ��ܡ�
+这些文件包含框架类 CMainFrame，该类派生自
+CFrameWnd 并控制所有 SDI 框架功能。
 
 /////////////////////////////////////////////////////////////////////////////
 
-Ӧ�ó����򵼴���һ���ĵ����ͺ�һ����ͼ:
+应用程序向导创建一个文档类型和一个视图:
 
-MapEditorDoc.h��MapEditorDoc.cpp - �ĵ�
-��Щ�ļ����� CMapEditorDoc �ࡣ�༭��Щ�ļ��������������ĵ����ݲ���ʵ���ļ�����ͼ���(ͨ�� CMapEditorDoc::Serialize)��
+MapEditorDoc.h，MapEditorDoc.cpp - 文档
+这些文件包含 CMapEditorDoc 类。编辑这些文件可以添加特殊文档数据并可实现文件保存和加载(通过 CMapEditorDoc::Serialize)。
 
-MapEditorView.h��MapEditorView.cpp - �ĵ�����ͼ
-��Щ�ļ����� CMapEditorView �ࡣ
-CMapEditorView �������ڲ鿴 CMapEditorDoc ����
-
-
+MapEditorView.h，MapEditorView.cpp - 文档的视图
+这些文件包含 CMapEditorView 类。
+CMapEditorView 对象用于查看 CMapEditorDoc 对象。
 
 
 
-/////////////////////////////////////////////////////////////////////////////
 
-��������:
-
-ActiveX �ؼ�
-Ӧ�ó��������ʹ�� ActiveX �ؼ���֧�֡�
-
-��ӡ����ӡԤ��֧��
-Ӧ�ó�������ͨ���� MFC ����� CView ���еĳ�Ա���������������ڴ�����ӡ����ӡ���úʹ�ӡԤ������Ĵ��롣
 
 /////////////////////////////////////////////////////////////////////////////
 
-������׼�ļ�:
+其他功能:
 
-StdAfx.h��StdAfx.cpp
-��Щ�ļ�����������Ϊ MapEditor.pch ��Ԥ����ͷ (PCH) �ļ�����Ϊ StdAfx.obj ��Ԥ���������ļ���
+ActiveX 控件
+应用程序包括对使用 ActiveX 控件的支持。
+
+打印及打印预览支持
+应用程序向导已通过从 MFC 库调用 CView 类中的成员函数，生成了用于处理打印、打印设置和打印预览命令的代码。
+
+/////////////////////////////////////////////////////////////////////////////
+
+其他标准文件:
+
+StdAfx.h，StdAfx.cpp
+这些文件用于生成名为 MapEditor.pch 的预编译头 (PCH) 文件和名为 StdAfx.obj 的预编译类型文件。
 
 Resource.h
-���Ǳ�׼ͷ�ļ����������µ���Դ ID��
-Microsoft Visual C++ ��ȡ�����´��ļ���
+这是标准头文件，它定义新的资源 ID。
+Microsoft Visual C++ 读取并更新此文件。
 
 MapEditor.manifest
-	Ӧ�ó����嵥�ļ��� Windows XP ��������Ӧ�ó���
-	���ض��汾���г��򼯵������ԡ����س���ʹ�ô�
-	��Ϣ�ӳ��򼯻�������ʵ��ĳ��򼯻�
-	��Ӧ�ó������˽����Ϣ��Ӧ�ó����嵥����Ϊ�����·ַ�����Ϊ
-	��Ӧ�ó����ִ���ļ���װ����ͬ�ļ����е��ⲿ .manifest �ļ�������
-	Ҳ��������Դ����ʽ�����ڸÿ�ִ���ļ��С� 
+	应用程序清单文件供 Windows XP 用来描述应用程序
+	对特定版本并行程序集的依赖性。加载程序使用此
+	信息从程序集缓存加载适当的程序集或
+	从应用程序加载私有信息。应用程序清单可能为了重新分发而作为
+	与应用程序可执行文件安装在相同文件夹中的外部 .manifest 文件包括，
+	也可能以资源的形式包括在该可执行文件中。 
 /////////////////////////////////////////////////////////////////////////////
 
-����ע��:
+其他注释:
 
-Ӧ�ó�����ʹ�á�TODO:��ָʾӦ���ӻ��Զ����Դ���벿�֡�
+应用程序向导使用“TODO:”指示应添加或自定义的源代码部分。
 
-���Ӧ�ó����ڹ����� DLL ��ʹ�� MFC������Ҫ���·�����Щ MFC DLL�����Ӧ�ó������õ����������ϵͳ�ĵ�ǰ�������ò�ͬ������Ҫ���·�����Ӧ�ı��ػ���Դ MFC100XXX.DLL���й�����������ĸ�����Ϣ����μ� MSDN �ĵ����й� Redistributing Visual C++ applications (���·��� Visual C++ Ӧ�ó���)���½ڡ�
+如果应用程序在共享的 DLL 中使用 MFC，则需要重新发布这些 MFC DLL；如果应用程序所用的语言与操作系统的当前区域设置不同，则还需要重新发布对应的本地化资源 MFC100XXX.DLL。有关这两个主题的更多信息，请参见 MSDN 文档中有关 Redistributing Visual C++ applications (重新发布 Visual C++ 应用程序)的章节。
 
 /////////////////////////////////////////////////////////////////////////////
