@@ -1,0 +1,82 @@
+﻿生成启动时间为 2016/10/16 11:06:12。
+     1>项目“J:\MyProject\MapEditor\MapEditor\MapEditor.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Release\MapEditor.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Release\MapEditor.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\MapEditor.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Animation.cpp BlockLayer.cpp Creature.cpp CurSelImage.cpp Entity.cpp EventLayer.cpp IniFile.cpp Layer.cpp MainFrm.cpp Monster.cpp NewMapDlg.cpp ObjectLayer.cpp PropertiesWnd.cpp ResManager.cpp Role.cpp TileMap.cpp SceneResWnd.cpp Sprite.cpp Texture.cpp ThumbWnd.cpp TileLayer.cpp MapEditor.cpp MapEditorDoc.cpp MapEditorView.cpp
+         Animation.cpp
+         BlockLayer.cpp
+         Creature.cpp
+         CurSelImage.cpp
+         Entity.cpp
+         EventLayer.cpp
+     1>EventLayer.cpp(51): warning C4172: 返回局部变量或临时变量的地址
+         IniFile.cpp
+         Layer.cpp
+         MainFrm.cpp
+         Monster.cpp
+         NewMapDlg.cpp
+         ObjectLayer.cpp
+         PropertiesWnd.cpp
+         ResManager.cpp
+         Role.cpp
+         TileMap.cpp
+     1>TileMap.cpp(64): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+     1>TileMap.cpp(65): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+         SceneResWnd.cpp
+         Sprite.cpp
+     1>Sprite.cpp(40): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+     1>Sprite.cpp(48): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+     1>Sprite.cpp(56): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+     1>Sprite.cpp(64): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+         Texture.cpp
+         ThumbWnd.cpp
+         正在编译...
+         TileLayer.cpp
+         MapEditor.cpp
+         MapEditorDoc.cpp
+         MapEditorView.cpp
+       ResourceCompile:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D NDEBUG /D _UNICODE /D UNICODE /D _AFXDLL /l"0x0804" /IRelease\ /nologo /fo"Release\MapEditor.res" MapEditor.rc 
+       Link:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"J:\MyProject\MapEditor\Release\MapEditor.exe" /INCREMENTAL:NO /NOLOGO /NODEFAULTLIB:libcmt.lib /MANIFEST /ManifestFile:"Release\MapEditor.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"J:\MyProject\MapEditor\Release\MapEditor.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"J:\MyProject\MapEditor\Release\MapEditor.lib" /MACHINE:X86 Release\MapEditor.res
+         Release\Animation.obj
+         Release\BlockLayer.obj
+         Release\Creature.obj
+         Release\CurSelImage.obj
+         Release\Entity.obj
+         Release\EventLayer.obj
+         Release\IniFile.obj
+         Release\Layer.obj
+         Release\MainFrm.obj
+         Release\Monster.obj
+         Release\NewMapDlg.obj
+         Release\ObjectLayer.obj
+         Release\PropertiesWnd.obj
+         Release\ResManager.obj
+         Release\Role.obj
+         Release\TileMap.obj
+         Release\SceneResWnd.obj
+         Release\Sprite.obj
+         Release\stdafx.obj
+         Release\Texture.obj
+         Release\ThumbWnd.obj
+         Release\TileLayer.obj
+         Release\MapEditor.obj
+         Release\MapEditorDoc.obj
+         Release\MapEditorView.obj
+         正在生成代码
+         已完成代码的生成
+         MapEditor.vcxproj -> J:\MyProject\MapEditor\Release\MapEditor.exe
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"J:\MyProject\MapEditor\Release\MapEditor.exe;#1" /manifest Release\MapEditor.exe.intermediate.manifest "C:\Program Files\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+       FinalizeBuildStatus:
+         正在删除文件“Release\MapEditor.unsuccessfulbuild”。
+         正在对“Release\MapEditor.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“J:\MyProject\MapEditor\MapEditor\MapEditor.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:31.01

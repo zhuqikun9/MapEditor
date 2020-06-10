@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<Sprite>
+<animation name = "walk"  RowFrames="15" ColFrames="16"	 ResPath="Data/Monster/骷髅_行走.bmp" fps = "9"/>
+<animation name = "stand"  RowFrames="12" ColFrames="16" ResPath="Data/Monster/骷髅_站立.bmp"
+fps = "3"/>
+<animation name = "attack"  RowFrames="13" ColFrames="16" ResPath="Data/Monster/骷髅_攻击.bmp"
+fps = "3"/>
+<animation name = "death"  RowFrames="15" ColFrames="16" ResPath="Data/Monster/骷髅_死亡.bmp"
+fps = "3"/>
+</Sprite>
